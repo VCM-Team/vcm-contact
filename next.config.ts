@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  // Ruta puente del QR: el QR impreso apunta siempre a /qr; aquí se cambia el destino
+  async redirects() {
+    return [
+      {
+        source: "/qr",
+        destination: "/?utm_source=qr&utm_medium=print",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
