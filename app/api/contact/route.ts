@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     try {
         const body = await req.json();
 
-        const { firstName, email, phone, address, message } = body;
+        const { firstName, email, phone } = body;
 
         await resend.emails.send({
             from: 'Advanced Leads <info@contact.advancedteamelite.com>',
@@ -19,9 +19,6 @@ export async function POST(req: Request) {
                     <p><strong>Name:</strong> ${firstName}</p>
                     <p><strong>Email:</strong> ${email}</p>
                     <p><strong>Phone:</strong> ${phone}</p>
-                    <p><strong>Address:</strong> ${address}</p>
-                    <p><strong>Additional Notes:</strong></p>
-                    <p style="background: #f4f4f4; padding: 10px;">${message || 'No additional notes.'}</p>
                 </div>
             `,
         });
