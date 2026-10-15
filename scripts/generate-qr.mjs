@@ -2,7 +2,7 @@ import QRCode from "qrcode";
 import { mkdir, writeFile } from "node:fs/promises";
 
 // A dónde lleva el QR. Mejor una ruta puente de tu dominio (ver paso 4)
-const TARGET_URL = "https://discovervcm.com/";
+const TARGET_URL = "https://contact.discovervcm.com/";
 const OUT_DIR = "public/qr";
 
 const options = {
