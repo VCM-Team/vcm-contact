@@ -39,7 +39,7 @@ export async function POST(req: Request) {
         const safePhone = escapeHtml(phone);
 
         await resend.emails.send({
-            from: "Advanced Leads <info@contact.advancedteamelite.com>",
+            from: "VCM <notifications@team.discovervcm.com>",
             to: process.env.NOTIFICATION_EMAIL || "dtalledo@advancedteamelite.com",
             replyTo: email,
             subject: `New VCM Contact Request: ${firstName}`,
